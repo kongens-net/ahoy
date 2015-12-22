@@ -107,6 +107,7 @@
           data: JSON.stringify([event]),
           contentType: "application/json; charset=utf-8",
           dataType: "json",
+          global: false, // Do not execute global event handlers - no output is expected from these requests anyway.
           success: function() {
             // remove from queue
             for (var i = 0; i < eventQueue.length; i++) {
